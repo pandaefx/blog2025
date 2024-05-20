@@ -1,5 +1,5 @@
 :root{
-    --height: 7vh;
+    --height: 8.5vh;
     --width: 100%;
     --avatar-height: calc( var(--height) * 0.9 );
 }
@@ -40,7 +40,7 @@
     background-color: #5e5e5e4f;
     /* z-index: -2; */
     scale: 1.1;
-}
+} 
 .avatar{
     position: relative;
     border-radius: var(--height);
@@ -48,28 +48,28 @@
     width: var(--avatar-height);
     margin-left: calc( var(--height) * 0.05 );
     margin-top: calc( var(--height) * 0.05 );
-    transition: all 0.5s;
-    filter: grayscale(1) blur(0.5px);
-    scale: .8;
+    transition: all 0.1s;
+    /* filter: grayscale(1) blur(0.5px); */
 }
 .avatar:hover{
+    border-radius: 0;
     /* transform: rotate(360deg); */
-    filter: grayscale(0) blur(0px);
-    scale: 1.25;
+    scale: 1.5;
+    /* filter: grayscale(0) blur(0px); */
 }
 .user{
     position: relative;
     display: flex;          /* flex弹性布局*/
     flex-direction: column; /* 上下排列 */
     margin: 0.5vmin;
-    width: calc( var(--width) - var(--height) * 1.05 );
+    width: calc( var(--width) - var(--height) * 1 );
     text-decoration: none;
 }
 .name{
     margin: 0px;
-    font-size: calc( var(--height) * 0.35 );
+    font-size: calc( var(--height) * 0.25 );
     transition: all 0.1s;
-    line-height: calc( var(--height) * 0.35 );
+    line-height: calc( var(--height) * 0.25 );
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
@@ -85,7 +85,7 @@
 }
 .introduction{
     margin: 2px;
-    font-size: calc( var(--height) * 0.125 );
+    font-size: calc( var(--height) * 0.15 );
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
