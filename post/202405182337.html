@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Hexo博客配置博客使用 cactus主题. 首次使用hexo 安装node.js  windows下.node.js链接 https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;  node.js安装会给系统安装一个npm的包管理器，这是hexo搭建博客所需要的；  linux下.下载源码包，然后解压到任意文件夹  sudo cp node-v12.16.2-linux-x64 &#x2F;opt&#x2F;cd &#x2F;opt&#x2F;n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客搭建">
+<meta property="og:url" content="https://pandaefx.github.io/post/202405182337.html">
+<meta property="og:site_name" content="雲中龍少">
+<meta property="og:description" content="Hexo博客配置博客使用 cactus主题. 首次使用hexo 安装node.js  windows下.node.js链接 https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;  node.js安装会给系统安装一个npm的包管理器，这是hexo搭建博客所需要的；  linux下.下载源码包，然后解压到任意文件夹  sudo cp node-v12.16.2-linux-x64 &#x2F;opt&#x2F;cd &#x2F;opt&#x2F;n">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/27/JWsCH1.png">
+<meta property="og:image" content="https://pandaefx.github.io/images/img/xshell-01.png">
+<meta property="og:image" content="https://pandaefx.github.io/images/img/xshell-02.png">
+<meta property="og:image" content="https://pandaefx.github.io/images/img/xshell-04.png">
+<meta property="og:image" content="https://pandaefx.github.io/images/img/xshell-03.png">
+<meta property="article:published_time" content="2024-05-18T15:37:42.000Z">
+<meta property="article:modified_time" content="2024-05-19T16:45:41.978Z">
+<meta property="article:author" content="Mr.Cat">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/04/27/JWsCH1.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/img/yun-615.webp">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/img/yun-192.webp" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/img/yun-192.webp">
+        
+      
+    
+    <!-- title -->
+    <title>Hexo博客搭建</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="雲中龍少" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/subpages/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/subpages/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/subpages/friend/">Friend</a></li><!--
+     --><!--
+       --><li><a href="/subpages/search/">Search</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/post/202304191854.html"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/post/web-beginner.html"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://pandaefx.github.io/post/202405182337.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://pandaefx.github.io/post/202405182337.html&text=Hexo博客搭建"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://pandaefx.github.io/post/202405182337.html&title=Hexo博客搭建"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://pandaefx.github.io/post/202405182337.html&is_video=false&description=Hexo博客搭建"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hexo博客搭建&body=Check out this article: https://pandaefx.github.io/post/202405182337.html"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://pandaefx.github.io/post/202405182337.html&title=Hexo博客搭建"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://pandaefx.github.io/post/202405182337.html&title=Hexo博客搭建"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://pandaefx.github.io/post/202405182337.html&title=Hexo博客搭建"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://pandaefx.github.io/post/202405182337.html&title=Hexo博客搭建"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://pandaefx.github.io/post/202405182337.html&name=Hexo博客搭建&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://pandaefx.github.io/post/202405182337.html&t=Hexo博客搭建"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">Hexo博客配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E6%AC%A1%E4%BD%BF%E7%94%A8hexo"><span class="toc-number">1.1.</span> <span class="toc-text">首次使用hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.</span> <span class="toc-text">Hexo安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96Hexo%E5%B9%B6%E9%85%8D%E7%BD%AE%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="toc-number">1.3.</span> <span class="toc-text">初始化Hexo并配置仓库地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88"><span class="toc-number">1.4.</span> <span class="toc-text">Hexo博客本地预览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85hexo-deployer-git"><span class="toc-number">1.5.</span> <span class="toc-text">安装hexo-deployer-git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE"><span class="toc-number">1.6.</span> <span class="toc-text">git 用户配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEssh%E5%AF%86%E9%92%A5"><span class="toc-number">1.7.</span> <span class="toc-text">配置ssh密钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0%E8%BF%9C%E7%AB%AF%E4%BB%93%E5%BA%93"><span class="toc-number">1.8.</span> <span class="toc-text">部署到远端仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E6%9B%BF%E6%8D%A2"><span class="toc-number">1.9.</span> <span class="toc-text">主题替换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6%E6%9B%B4%E6%96%B0%E4%B8%8E%E5%90%8C%E6%AD%A5"><span class="toc-number">2.</span> <span class="toc-text">博客源文件更新与同步</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%88%96%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0"><span class="toc-number">2.1.</span> <span class="toc-text">修改或添加文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E6%BA%90%E6%96%87%E4%BB%B6%E5%88%B0%E4%BB%93%E5%BA%93"><span class="toc-number">2.2.</span> <span class="toc-text">更新源文件到仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="toc-number">2.3.</span> <span class="toc-text">hexo常用插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E9%A1%B5%E6%98%BE%E7%A4%BA%E5%B7%A5%E7%A8%8B%E5%88%97%E8%A1%A8"><span class="toc-number">2.4.</span> <span class="toc-text">首页显示工程列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9"><span class="toc-number">2.5.</span> <span class="toc-text">标题样式修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E6%96%87%E7%9B%B8%E5%85%B3"><span class="toc-number">3.</span> <span class="toc-text">博文相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87"><span class="toc-number">3.1.</span> <span class="toc-text">在博文中添加图标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E7%AD%BE%E5%90%8D%E5%AD%97%E4%BD%93"><span class="toc-number">3.2.</span> <span class="toc-text">修改博客签名字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE%E9%A1%B5"><span class="toc-number">3.3.</span> <span class="toc-text">添加友链页</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">配置博客到云服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85shell%E5%B9%B6%E8%81%94%E6%9C%BA"><span class="toc-number">4.1.</span> <span class="toc-text">安装shell并联机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85git"><span class="toc-number">4.2.</span> <span class="toc-text">安装git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%BB%E6%9C%BA%E7%94%A8%E6%88%B7%E5%92%8C%E5%AF%86%E7%A0%81%E5%B9%B6%E9%85%8D%E7%BD%AESSH%E5%AF%86%E7%A0%81"><span class="toc-number">4.3.</span> <span class="toc-text">创建主机用户和密码并配置SSH密码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E5%AF%86%E9%92%A5-ssh%E6%9D%83%E9%99%90"><span class="toc-number">4.3.1.</span> <span class="toc-text">配置用户密钥.ssh权限</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE"><span class="toc-number">4.4.</span> <span class="toc-text">git仓库配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEnginx"><span class="toc-number">4.5.</span> <span class="toc-text">配置nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEnginx%E8%BD%AC%E5%8F%91"><span class="toc-number">4.6.</span> <span class="toc-text">配置nginx转发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0blog%E6%96%87%E4%BB%B6%E5%B9%B6%E5%8F%91%E5%B8%83%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">4.7.</span> <span class="toc-text">配置本地blog文件并发布到云服务器</span></a></li></ol></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Hexo博客搭建
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Mr.Cat</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-05-18T15:37:42.000Z" class="dt-published" itemprop="datePublished">2024-05-18</time>
+        
+        (Updated: <time datetime="2024-05-19T16:45:41.978Z" class="dt-updated" itemprop="dateModified">2024-05-20</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/subpages/categories/blog/">blog</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/subpages/tags/git/" rel="tag">git</a>, <a class="p-category" href="/subpages/tags/hexo/" rel="tag">hexo</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="Hexo博客配置"><a href="#Hexo博客配置" class="headerlink" title="Hexo博客配置"></a>Hexo博客配置</h2><p>博客使用<a target="_blank" rel="noopener" href="https://github.com/probberechts/hexo-theme-cactus"><i class="fa-solid fa-cactus"></i> cactus</a>主题.</p>
+<h3 id="首次使用hexo"><a href="#首次使用hexo" class="headerlink" title="首次使用hexo"></a>首次使用hexo</h3><ol>
+<li>安装<a target="_blank" rel="noopener" href="https://nodejs.org/en/">node.js</a></li>
+</ol>
+<p><code>windows</code>下.<br>node.js链接 <a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
+<blockquote>
+<p>node.js安装会给系统安装一个npm的包管理器，这是hexo搭建博客所需要的；</p>
+</blockquote>
+<p><code>linux</code>下.<br>下载源码包，然后解压到任意文件夹<br><img src="https://s1.ax1x.com/2020/04/27/JWsCH1.png" alt="avatar"> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> node-v12.16.2-linux-x64 /opt/</span><br><span class="line"><span class="built_in">cd</span> /opt/node-v12.16.2-linux-x64/bin/</span><br><span class="line">sudo <span class="built_in">ln</span> -s node /usr/bin/node</span><br><span class="line">sudo <span class="built_in">ln</span> -s npm /usr/bin/npm</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<p>执行上面的代码进行软连接.<br>打开终端获取管理员权限.<br>windows使用管理员身份运行命令提示符窗口.<br>liunx or mac则使用sudo su获得管理员权限.<br>查看node版本.    </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<p>查看npm版本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<p>返回版本号则安装成功.<br>2. 安装<a target="_blank" rel="noopener" href="https://git-scm.com/">git</a>.<br>安装完成后可以在系统上找到 <code>Git Bash Here</code>.<br>3. 安装<a target="_blank" rel="noopener" href="https://hexo.io/">hexo</a>.  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo</span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+<p>返回版本号则安装成功.<br>上面的安装步骤可能会需要重启电脑后才生效.</p>
+<h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><ul>
+<li>使用npm安装cnpm来提高构建博客框架时下载文件的速度的<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<code>linux</code><br>在linux执行完上一步骤后可能使用cnpm会返回<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Command <span class="string">&#x27;cnpm&#x27;</span> not found, did you mean:</span><br><span class="line">  <span class="built_in">command</span> <span class="string">&#x27;npm&#x27;</span> from deb npm (6.14.4+ds-1ubuntu2)</span><br><span class="line">  <span class="built_in">command</span> <span class="string">&#x27;cypm&#x27;</span> from deb pakcs (2.2.0-1)</span><br><span class="line">  <span class="built_in">command</span> <span class="string">&#x27;cpm&#x27;</span> from deb cpm (0.32-1.2build2)</span><br><span class="line">  <span class="built_in">command</span> <span class="string">&#x27;cxpm&#x27;</span> from deb xpmutils (1:3.5.12-1)</span><br><span class="line"></span><br><span class="line">Try: sudo apt install &lt;deb name&gt;</span><br></pre></td></tr></table></figure>
+是因为这样安装他的软链接不会指向&#x2F;usr&#x2F;bin&#x2F;目录，你需要返回查看cnpm安装时返回的代码如下<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/opt/node-v12.16.2-linux-x64/bin/cnpm -&gt; /opt/node-v12.16.2-linux-x64/lib/node_modules/cnpm/bin/cnpm</span><br><span class="line">+ cnpm@6.1.1</span><br><span class="line">added 685 packages from 953 contributors <span class="keyword">in</span> 14.043s</span><br></pre></td></tr></table></figure>
+然后手动创建软连接,之后再执行cnpm就可以使用了<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">ln</span> -s /opt/node-v12.16.2-linux-x64/bin/cnpm /usr/bin/cnpm</span><br></pre></td></tr></table></figure></li>
+<li><strong>使用cnpm安装hexo</strong><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm install -g hexo</span><br></pre></td></tr></table></figure>
+按照上面的方法手动创建软连接<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">ln</span> -s /opt/node-v12.16.2-linux-x64/bin/hexo /usr/bin/hexo</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="初始化Hexo并配置仓库地址"><a href="#初始化Hexo并配置仓库地址" class="headerlink" title="初始化Hexo并配置仓库地址"></a>初始化Hexo并配置仓库地址</h3><ul>
+<li>pwd 返回当前终端所在系统位置</li>
+<li>mkdir ‘文件夹名’ 创建一个博客文件目录，后续的配置都在这个目录内进行</li>
+<li>hexo init 初始化博客框架<br>初始化hexo.<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir blog</span><br><span class="line">cd blog</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+初始化报错,可能由于网络延迟导致,配置国内源taobao.<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+初始化成功后查看文件列表如下.<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l</span><br><span class="line"><span class="comment">#total 261</span></span><br><span class="line"><span class="comment">#-rw-r--r-- 1 Administrator 197121   2465  2月 10 01:49 _config.yml</span></span><br><span class="line"><span class="comment">#-rw-r--r-- 1 Administrator 197121  71577  2月 10 01:49 db.json</span></span><br><span class="line"><span class="comment">#drwxr-xr-x 1 Administrator 197121      0  2月 10 01:13 node_modules/</span></span><br><span class="line"><span class="comment">#-rw-r--r-- 1 Administrator 197121    581  2月 10 01:35 package.json</span></span><br><span class="line"><span class="comment">#-rw-r--r-- 1 Administrator 197121 133002  2月 10 01:13 package-lock.json</span></span><br><span class="line"><span class="comment">#drwxr-xr-x 1 Administrator 197121      0  2月 10 01:49 public/</span></span><br><span class="line"><span class="comment">#drwxr-xr-x 1 Administrator 197121      0  2月 10 01:02 scaffolds/</span></span><br><span class="line"><span class="comment">#drwxr-xr-x 1 Administrator 197121      0  2月 10 01:02 source/</span></span><br><span class="line"><span class="comment">#drwxr-xr-x 1 Administrator 197121      0  2月 10 01:46 themes/</span></span><br><span class="line"><span class="comment">## 可以列出当前目录下的hexo创建的所有文件windows使用dir来查看</span></span><br></pre></td></tr></table></figure>
+在<code>_config.yml</code>中添加以下代码,配置github远程仓库地址.<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&#x27;https://github.com/pandaefx/pandaefx.github.io.git&#x27;</span> <span class="comment"># 部署仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">&#x27;master&#x27;</span> <span class="comment"># 分支名master main</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo start</span><br><span class="line"><span class="comment">#INFO  Start processing</span></span><br><span class="line"><span class="comment">#INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span></span><br><span class="line"><span class="comment">## 本地运行博客网页可使用hexo s</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo n <span class="string">&quot;博客文章名&quot;</span></span><br><span class="line"><span class="comment">#INFO Created:&quot;文章路径&quot; </span></span><br><span class="line"><span class="comment">## 创建一篇新的博客文章</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean </span><br><span class="line"><span class="comment">## 删除静态博客</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate </span><br><span class="line"><span class="comment">## 生成静态博客 hexo g</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Hexo博客本地预览"><a href="#Hexo博客本地预览" class="headerlink" title="Hexo博客本地预览"></a>Hexo博客本地预览</h3><p>生成本地<a target="_blank" rel="noopener" href="http://localhost:4000/">预览网页</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean REM 清除页面历史</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate REM 生成本地预览文件</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server REM 启动本地预览服务 默认为 http://localhost:4000/</span><br></pre></td></tr></table></figure>
+<p>预览完毕按<code>Ctrl</code>+<code>C</code>退出预览,再执行一次<code>hexo clean</code>,确保文件目录保持干净.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<h3 id="安装hexo-deployer-git"><a href="#安装hexo-deployer-git" class="headerlink" title="安装hexo-deployer-git"></a>安装hexo-deployer-git</h3><p>在博客根目录下使用以下命令安装git</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<h3 id="git-用户配置"><a href="#git-用户配置" class="headerlink" title="git 用户配置"></a>git 用户配置</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># git config --global user.name &quot;用户名&quot;</span><br><span class="line"># git config --global user.email &quot;邮箱&quot;</span><br><span class="line">git config --global user.name luomit</span><br><span class="line">git config --global user.email 1107199736@qq.com</span><br><span class="line">## 注意，如果需要在部署时同时部署到不同的站点，则这些站点的用户名和注册邮箱需要一致</span><br></pre></td></tr></table></figure>
+<h3 id="配置ssh密钥"><a href="#配置ssh密钥" class="headerlink" title="配置ssh密钥"></a>配置ssh密钥</h3><ul>
+<li>检查ssh密钥是否存在<br>cd 到系统根目录，使用ls -l 列出所有文件，如果有.ssh文件夹存在，则打开.pud结尾的文件将密钥复制到远端站点的用户设置内!</li>
+<li>生成SSH密钥<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;your_email@example.com&quot;</span></span><br><span class="line"><span class="comment">## 使用以上代码会生成一个.ssh的文件夹在系统根目录内，.ssh文件夹内就有id_rsa和id_rsa.pub两个文件，分别表示生成的私钥和公钥</span></span><br><span class="line"><span class="comment">## 公钥一定要妥善保管，切勿泄露他人，以免心怀不轨的人偷走你的&#x27;小姐姐&#x27;or&#x27;小哥哥&#x27;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="部署到远端仓库"><a href="#部署到远端仓库" class="headerlink" title="部署到远端仓库"></a>部署到远端仓库</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean </span><br><span class="line"><span class="comment">## 删除静态博客</span></span><br><span class="line">$ hexo generate </span><br><span class="line"><span class="comment">## 生成静态博客</span></span><br><span class="line">$ hexo deploy</span><br><span class="line"><span class="comment">## 部署</span></span><br><span class="line">$ hexo backup</span><br><span class="line"><span class="comment">## 备份</span></span><br><span class="line">$ hexo clean &amp;&amp; hexo generate &amp;&amp; hexo backup &amp;&amp; hexo deploy</span><br><span class="line"><span class="comment">## 也可以一次执行全部命令</span></span><br></pre></td></tr></table></figure>
+<h3 id="主题替换"><a href="#主题替换" class="headerlink" title="主题替换"></a>主题替换</h3><p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo</a>主题官网</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/JoeyBling/hexo-theme-yilia-plus.git /themes/yilia</span><br><span class="line">## git clone &quot;主题仓库路径&quot; &quot;目标路径&quot;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="博客源文件更新与同步"><a href="#博客源文件更新与同步" class="headerlink" title="博客源文件更新与同步"></a>博客源文件更新与同步</h2><p><a target="_blank" rel="noopener" href="https://github.com/pandaefx/hexo-site.git">源文件仓库地址</a><code>https://github.com/pandaefx/hexo-site.git</code><br>首次或本地没有源文件仓库时,先获取github远程源文件仓库.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/pandaefx/hexo-site.git</span><br></pre></td></tr></table></figure>
+<p>首次使用git时要配置用户名和用户邮箱</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;username&quot;</span> REM 配置用户名</span><br><span class="line">git config --global user.email user@email.com REM 配置用户邮箱</span><br><span class="line">git config --global credential.helper store REM 保存账号密码可避免每次输入</span><br><span class="line">git config --global --list REM 查看配置信息</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改或添加文章"><a href="#修改或添加文章" class="headerlink" title="修改或添加文章"></a>修改或添加文章</h3><p><i class="fa-solid fa-user-pen"></i>….</p>
+<h3 id="更新源文件到仓库"><a href="#更新源文件到仓库" class="headerlink" title="更新源文件到仓库"></a>更新源文件到仓库</h3><p>如果有执行过hexo部署的先清除本地缓存</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<p>提交修改并推送至<i class="fa-brands fa-github"></i></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status REM 查看仓库状态</span><br><span class="line">git commit -m <span class="string">&quot;commit_message&quot;</span> REM 提交</span><br><span class="line">git push origin main REM 推送到 hexo-site 仓库</span><br></pre></td></tr></table></figure>
+
+<h3 id="hexo常用插件"><a href="#hexo常用插件" class="headerlink" title="hexo常用插件"></a>hexo常用插件</h3><p>hexo-generator-search 本地搜索</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+<p>hexo-generator-feed rss订阅</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+<p>hexo-deployer-git 博客推送&#x2F;发布</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h3 id="首页显示工程列表"><a href="#首页显示工程列表" class="headerlink" title="首页显示工程列表"></a>首页显示工程列表</h3><p>在<strong>根目录</strong>下source文件夹内创建_data&#x2F;projects.json(不是theme&#x2F;castus&#x2F;source&#x2F;)</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">[</span></span><br><span class="line">   <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;Blog Source Code&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;https://github.com/pandaefx/hexo-blog-source&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;desc&quot;</span><span class="punctuation">:</span><span class="string">&quot;blog source code hosted on github.&quot;</span></span><br><span class="line">   <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;Font Awesome&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span><span class="string">&quot;http://fontawesome.io/&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;desc&quot;</span><span class="punctuation">:</span><span class="string">&quot;The iconic font and CSS toolkit&quot;</span></span><br><span class="line">   <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+<h3 id="标题样式修改"><a href="#标题样式修改" class="headerlink" title="标题样式修改"></a>标题样式修改</h3><p>将文章##号改为H2;在&#x2F;theme&#x2F;cactus&#x2F;source&#x2F;css&#x2F;_partial&#x2F;article.styl</p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.content</span></span><br><span class="line">  <span class="selector-tag">h2</span><span class="selector-pseudo">:before</span></span><br><span class="line">    <span class="attribute">position</span>: absolute</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">4px</span></span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">1rem</span></span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">$color</span>-accent-<span class="number">1</span></span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;H2&quot;</span> # 改这 </span><br><span class="line">    <span class="attribute">font-weight</span>: lighter # 调节粗细 lighter &lt; normal &lt; bold &lt; bolder</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">0.6rem</span> # 调节字体大小 </span><br></pre></td></tr></table></figure>
+<p>将文章目录标题##号改为H2;在&#x2F;themes&#x2F;cactus&#x2F;source&#x2F;css&#x2F;_partial&#x2F;post&#x2F;actions_desktop.styl</p>
+<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">&amp;:before</span></span><br><span class="line">  <span class="attribute">color</span>: <span class="variable">$color</span>-accent-<span class="number">1</span></span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;H2&quot;</span> </span><br><span class="line">  <span class="attribute">font-weight</span>: lighter</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">0.5rem</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="博文相关"><a href="#博文相关" class="headerlink" title="博文相关"></a>博文相关</h2><h3 id="在博文中添加图标"><a href="#在博文中添加图标" class="headerlink" title="在博文中添加图标"></a>在博文中添加图标</h3><p>在文章任意位置添加以下代码</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">&quot;https://use.fontawesome.com/releases/v5.0.13/js/all.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">&quot;https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://use.fontawesome.com/releases/v5.0.13/css/all.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>就可以从 <a target="_blank" rel="noopener" href="https://fontawesome.com/icons/"><i class="fa-solid fa-layer-group"></i></a>  <a target="_blank" rel="noopener" href="https://fontawesome.com/icons/">https://fontawesome.com/icons/</a></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa-solid fa-font-awesome&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="修改博客签名字体"><a href="#修改博客签名字体" class="headerlink" title="修改博客签名字体"></a>修改博客签名字体</h3><ol>
+<li>下载字体文件(Time-Machino.ttf)存放到<code>/theme/cactus/source/lib/</code>下.</li>
+<li>在<code>/theme/cactus/source/css/</code>下新建名字为<code>_myfonts.styl</code>的文件内容如下.<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@font-face</span></span><br><span class="line">  <span class="attribute">font-style</span>: normal</span><br><span class="line">  <span class="attribute">font-family</span> <span class="string">&quot;Machino&quot;</span>;  </span><br><span class="line">  <span class="attribute">src</span>: <span class="built_in">local</span>(<span class="string">&quot;Time Machino&quot;</span>), <span class="built_in">url</span>(<span class="string">&quot;../lib/Time-Machino.ttf&quot;</span>) <span class="built_in">format</span>(<span class="string">&quot;truetype&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>打开在<code>/theme/cactus/source/css/</code>下的style.styl,在开头加入<code>@import &quot;_myfonts&quot;</code>引入字体.</li>
+<li>打开在<code>/theme/cactus/source/css/</code>下的style.styl,在末尾对要修改的标签进行操作,如下.<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">  <span class="attribute">font-family</span>: Machino;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="添加友链页"><a href="#添加友链页" class="headerlink" title="添加友链页"></a>添加友链页</h3><p>新建friend的页面文件.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page friend</span><br></pre></td></tr></table></figure>
+<p>打开根目录&#x2F;source&#x2F;friend&#x2F;index.md</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 友链</span><br><span class="line">date: 2024-05-13 20:54:03</span><br><span class="line"><span class="section">type: &quot;friend&quot;</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;meta charset=&quot;utf-8&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span></span><br><span class="line"><span class="code">    &lt;title&gt;friend link&lt;/title&gt;</span></span><br><span class="line"><span class="code">    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./friend.css&quot;&gt;</span></span><br><span class="line"><span class="code">  &lt;/head&gt;</span></span><br><span class="line"><span class="code">  &lt;body&gt;</span></span><br><span class="line"><span class="code">    &lt;div id=&quot;friend-box&quot;&gt;</span></span><br><span class="line"><span class="code">        &lt;div class=&quot;box&quot;&gt;</span></span><br><span class="line"><span class="code">            &lt;img class=&quot;avatar&quot; src=&quot;头像链接&quot; alt=&quot;avatar&quot;&gt;</span></span><br><span class="line"><span class="code">            &lt;div class=&quot;user&quot;&gt;</span></span><br><span class="line"><span class="code">                &lt;a href=&quot;主页地址&quot; class=&quot;name&quot;&gt;用户昵称&lt;/a&gt;</span></span><br><span class="line"><span class="code">                &lt;p class=&quot;introduction&quot;&gt;主页简介&lt;/p&gt;</span></span><br><span class="line"><span class="code">            &lt;/div&gt;</span></span><br><span class="line"><span class="code">        &lt;/div&gt;</span></span><br><span class="line"><span class="code">    &lt;/div&gt;</span></span><br><span class="line"><span class="code">  &lt;/body&gt;</span></span><br><span class="line"><span class="code">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+<p>之后只要按照格式插入&lt;body&gt;&lt;&#x2F;body&gt;中并修改对应参数即可.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;friend-box&quot;</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;div class=&quot;box&quot;&gt;</span></span><br><span class="line"><span class="code">        &lt;img class=&quot;avatar&quot; src=&quot;头像链接&quot; alt=&quot;avatar&quot;&gt;</span></span><br><span class="line"><span class="code">        &lt;div class=&quot;user&quot;&gt;</span></span><br><span class="line"><span class="code">            &lt;a href=&quot;主页地址&quot; class=&quot;name&quot;&gt;用户昵称&lt;/a&gt;</span></span><br><span class="line"><span class="code">            &lt;p class=&quot;introduction&quot;&gt;主页简介&lt;/p&gt;</span></span><br><span class="line"><span class="code">        &lt;/div&gt;</span></span><br><span class="line"><span class="code">    &lt;/div&gt;</span></span><br><span class="line"><span class="code">&lt;/div&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在根目录&#x2F;source&#x2F;friend&#x2F;下新建friend.css</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;</span><br><span class="line">    <span class="attr">--height</span>: <span class="number">10vh</span>;</span><br><span class="line">    <span class="attr">--width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attr">--avatar-height</span>: <span class="built_in">calc</span>( <span class="built_in">var</span>(--height) * <span class="number">0.9</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#friend-box</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">display</span>: grid;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">1</span>fr <span class="number">1</span>fr;</span><br><span class="line">    <span class="attribute">gap</span>: <span class="number">1vmin</span> <span class="number">1vmin</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">2vh</span>;   </span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;          <span class="comment">/* 弹性布局*/</span></span><br><span class="line">    <span class="attribute">flex-direction</span>: row;    <span class="comment">/* 左右排列*/</span></span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">var</span>(--height);</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="built_in">calc</span>( <span class="built_in">var</span>(--height) *.<span class="number">1</span> ); </span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">0</span>;</span><br><span class="line">    scale: .<span class="number">9</span>;</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">0.1s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#5e5e5e4f</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">2</span>;</span><br><span class="line">    scale: <span class="number">1.1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.avatar</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="built_in">var</span>(--height);</span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">var</span>(--avatar-height);</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">var</span>(--avatar-height);</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="built_in">calc</span>( <span class="built_in">var</span>(--height) * <span class="number">0.05</span> );</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="built_in">calc</span>( <span class="built_in">var</span>(--height) * <span class="number">0.05</span> );</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">0.5s</span>;</span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">1</span>) <span class="built_in">blur</span>(<span class="number">0.5px</span>);</span><br><span class="line">    scale: .<span class="number">8</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.avatar</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="comment">/* transform: rotate(360deg); */</span></span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">0</span>) <span class="built_in">blur</span>(<span class="number">0px</span>);</span><br><span class="line">    scale: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.user</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">display</span>: flex;          <span class="comment">/* flex弹性布局*/</span></span><br><span class="line">    <span class="attribute">flex-direction</span>: column; <span class="comment">/* 上下排列 */</span></span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">1vmin</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>( <span class="built_in">var</span>(--width) - <span class="built_in">var</span>(--height) * <span class="number">1.05</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.name</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="built_in">calc</span>( <span class="built_in">var</span>(--height) * <span class="number">0.25</span> );</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">0.2s</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="built_in">calc</span>( <span class="built_in">var</span>(--height) * <span class="number">0.25</span> );</span><br><span class="line">    <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">    -webkit-box-orient: vertical;</span><br><span class="line">    -webkit-line-clamp: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* .name:hover&#123;none</span></span><br><span class="line"><span class="comment">&#125; */</span></span><br><span class="line"><span class="selector-class">.introduction</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="built_in">calc</span>( <span class="built_in">var</span>(--height) * <span class="number">0.125</span> );</span><br><span class="line">    <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">    -webkit-box-orient: vertical;</span><br><span class="line">    -webkit-line-clamp: <span class="number">2</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#friend-box</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">    <span class="attribute">text-decoration-line</span>: underline;</span><br><span class="line">    <span class="attribute">text-decoration</span>-thickness: <span class="number">0.5px</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#friend-box</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bolder;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#2bbc8a</span>;</span><br><span class="line">    <span class="comment">/* background-image: none; */</span></span><br><span class="line">    <span class="attribute">text-decoration-line</span>: none;</span><br><span class="line">    <span class="attribute">text-shadow</span>: <span class="number">2px</span> <span class="number">2px</span> <span class="number">2px</span> <span class="number">#2bbc89b9</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>根目录&#x2F;source&#x2F;friend&#x2F;index.md中的link的css引用一定要仔细检查,对应上friend.css文件的位置.</p>
+<h2 id="配置博客到云服务器"><a href="#配置博客到云服务器" class="headerlink" title="配置博客到云服务器"></a><del>配置博客到云服务器</del></h2><p>先看[[202405182153|Nginx]]的配置.<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qU4y1K7Hk?p=2">BlackFile</a>哔哩哔哩Up主<br>centeros8.0<br>华为云</p>
+<h3 id="安装shell并联机"><a href="#安装shell并联机" class="headerlink" title="安装shell并联机"></a>安装shell并联机</h3><ol>
+<li>下载<a target="_blank" rel="noopener" href="https://www.xshell.com/">xshell</a>,并安装xshell.</li>
+<li>购买云服务器,会获得主机113.**.***.158和用户名root并且一定要记得<strong>先重置以下主机的密码</strong>.</li>
+<li>打开xshell,文件-&gt;新建-&gt;输入主机113.**.***.158,设置名称.<br><img src="/../images/img/xshell-01.png"></li>
+<li>点击用户身份验证-&gt;输入用户名-&gt;密码(重置的主机密码)-&gt;确定-&gt;在左边栏右键主机-&gt;属性-&gt;链接(成功进入).<br><img src="/../images/img/xshell-02.png"></li>
+</ol>
+<h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p>系统为centos7.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum install -y git</span><br></pre></td></tr></table></figure>
+<p>源码安装↓.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum install -y wget</span><br><span class="line">sudo yum install -y gcc-c++</span><br><span class="line">sudo yum install -y zlib-devel perl-ExtUtils-MakeMaker</span><br></pre></td></tr></table></figure>
+<p>可以先去git官网看看最新的版本号然后替换版本号↓.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.9.0.tar.gz</span><br></pre></td></tr></table></figure>
+<p>下载好后就是解压安装↓</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf git-2.9.0.tar.gz REM 解压git</span><br><span class="line"><span class="built_in">cd</span> git-2.9.0  REM 移动到git文件夹下</span><br><span class="line">./configure --prefix=/usr/local  REM 指定安装路径</span><br><span class="line">make </span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+<p>配置git在主机的PATH环境变量.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">which</span> git REM 查看git的安装位置</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=$PATH:/usr/local/git/bin&#x27;</span> &gt;&gt; /etc/bashrc REM 设置变量</span><br><span class="line"><span class="built_in">source</span> /etc/bashrc REM 使配置生效</span><br><span class="line">git --version REM 返回版本号则git安装成功</span><br></pre></td></tr></table></figure>
+<h3 id="创建主机用户和密码并配置SSH密码"><a href="#创建主机用户和密码并配置SSH密码" class="headerlink" title="创建主机用户和密码并配置SSH密码"></a>创建主机用户和密码并配置SSH密码</h3><p>用户密码.<br>zxcv<br>用户名.<br>abc<br>创建用户并设置用户密码.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">adduser <span class="built_in">cat</span> REM <span class="built_in">cat</span>为用户名</span><br><span class="line">passwd <span class="built_in">cat</span></span><br></pre></td></tr></table></figure>
+<p>为用户分配权限.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">usermod <span class="built_in">cat</span> -G wheel</span><br></pre></td></tr></table></figure>
+<p>本地创建ssh密钥(在本地的电脑上打开终端执行,不是xshell的服务器上⚠️)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+<p>一直按回车就完事了,最后会提示<code>/c/Users/panda/.ssh/id_rsa.pub</code>密钥路径.<br>打开<code>C:\Users\panda\.ssh</code>文件夹,将id_rsa.pub内容复制备用.   </p>
+<p>回到<code>xshell</code>远程主机终端上.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">su - <span class="built_in">cat</span></span><br></pre></td></tr></table></figure>
+<p>这是终端内的用户从root@机器名-&gt;cat@机器名说明用户切换成功.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim .ssh/authorized_keys REM 新建并编辑authorized_keys文件</span><br></pre></td></tr></table></figure>
+<p>如果提示没有vim则可以换nano等其他文本编辑器或者安装vim↓.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum install -y vim</span><br></pre></td></tr></table></figure>
+<p>最后将id_rsa.pub的内容粘贴到authorized_keys上(vim保存退出’:wq’).</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> .ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+<p>打印出密钥则粘贴成功了.</p>
+<h4 id="配置用户密钥-ssh权限"><a href="#配置用户密钥-ssh权限" class="headerlink" title="配置用户密钥.ssh权限"></a>配置用户密钥.ssh权限</h4><p>移动到用户cat目录下修改.ssh的文件权限权重如下↓.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/cat/</span><br><span class="line"><span class="built_in">chmod</span> 700 .ssh</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/img/xshell-04.png"></p>
+<h3 id="git仓库配置"><a href="#git仓库配置" class="headerlink" title="git仓库配置"></a>git仓库配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">exit</span> REM 提出用户进入root管理员,确保在root用户下再执行下面的操作↓.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> /home/git/ REM 创建git目录</span><br><span class="line"><span class="built_in">chown</span> -R <span class="built_in">cat</span>:<span class="built_in">cat</span> /home/git/ REM 用户所有权权限</span><br><span class="line"><span class="built_in">chmod</span> -R 755 /home/git/ REM git文件夹权限</span><br></pre></td></tr></table></figure>
+<p>进入git目录,初始化一个git仓库,并设置仓库的权限.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/git/</span><br><span class="line">git init --bare blog.git</span><br><span class="line"><span class="built_in">chown</span> <span class="built_in">cat</span>:<span class="built_in">cat</span> -R blog.git</span><br></pre></td></tr></table></figure>
+<p>新建钩子文件<code>post-receive</code>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /home/git/blog.git/hooks/post-receive</span><br></pre></td></tr></table></figure>
+<p>将以下↓两句粘贴到&#x2F;home&#x2F;git&#x2F;blog.git&#x2F;hooks&#x2F;post-receive文件中,<code>:wq</code>保存并退出.</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">git --work-tree=/home/blog --git-dir=/home/git/blog.git checkout -<span class="keyword">f</span></span><br></pre></td></tr></table></figure>
+<p>使用<code>cat /home/git/blog.git/hooks/post-receive</code>打印看看没有吗保存成功.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x /home/git/blog.git/hooks/post-receive REM 修该文件夹权限</span><br></pre></td></tr></table></figure>
+<h3 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h3><p>创建blog目录用户nginx转发.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> /home/blog/</span><br><span class="line"><span class="built_in">chown</span> -R <span class="built_in">cat</span>:<span class="built_in">cat</span> /home/blog/</span><br><span class="line"><span class="built_in">chmod</span> -R 755 /home/blog/</span><br></pre></td></tr></table></figure>
+<p>安装nginx.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y nginx</span><br></pre></td></tr></table></figure>
+<p>启动nginx.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start nginx.service</span><br></pre></td></tr></table></figure>
+<p>查看Nginx服务状态.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status nginx.service</span><br></pre></td></tr></table></figure>
+<p>如下图所示即安装成功👌.<br><img src="/../images/img/xshell-03.png"></p>
+<h3 id="配置nginx转发"><a href="#配置nginx转发" class="headerlink" title="配置nginx转发"></a>配置nginx转发</h3><p>查看nginx的默认配置文件的安装位置.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -t</span><br></pre></td></tr></table></figure>
+<p><code>configuration file /etc/nginx/nginx.conf test is successful</code><br>使用vim或其他文本编辑器打开&#x2F;etc&#x2F;nginx&#x2F;nginx.conf</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
+<p>修改以下有文字说明的内容↓.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80 default_server;</span><br><span class="line">    listen [::]:80 default_server;</span><br><span class="line">    root /home/blog;    <span class="comment"># 修改为创建的blog目录地址</span></span><br><span class="line">    server_name www.example.com; <span class="comment"># 需要修改为你的域名（或者公网ip）</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Load configuration files for the default server block.</span></span><br><span class="line">    include /etc/nginx/default.d/*.conf;</span><br><span class="line">    location / &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    error_page 404 /404.html;</span><br><span class="line">        location = /40x.html &#123;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>分别是root后面和server_name后面,改完<code>:wq</code>保存退出.<br>重启Nginx服务.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart nginx.service</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置本地blog文件并发布到云服务器"><a href="#配置本地blog文件并发布到云服务器" class="headerlink" title="配置本地blog文件并发布到云服务器"></a>配置本地blog文件并发布到云服务器</h3><p>修改<code>_config.yaml</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">cat@113.**.***.158:/home/git/blog.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/subpages/about/">About</a></li>
+        
+          <li><a href="/subpages/archives/">Writing</a></li>
+        
+          <li><a href="/subpages/friend/">Friend</a></li>
+        
+          <li><a href="/subpages/search/">Search</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">Hexo博客配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E6%AC%A1%E4%BD%BF%E7%94%A8hexo"><span class="toc-number">1.1.</span> <span class="toc-text">首次使用hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.</span> <span class="toc-text">Hexo安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96Hexo%E5%B9%B6%E9%85%8D%E7%BD%AE%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="toc-number">1.3.</span> <span class="toc-text">初始化Hexo并配置仓库地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88"><span class="toc-number">1.4.</span> <span class="toc-text">Hexo博客本地预览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85hexo-deployer-git"><span class="toc-number">1.5.</span> <span class="toc-text">安装hexo-deployer-git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE"><span class="toc-number">1.6.</span> <span class="toc-text">git 用户配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEssh%E5%AF%86%E9%92%A5"><span class="toc-number">1.7.</span> <span class="toc-text">配置ssh密钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0%E8%BF%9C%E7%AB%AF%E4%BB%93%E5%BA%93"><span class="toc-number">1.8.</span> <span class="toc-text">部署到远端仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E6%9B%BF%E6%8D%A2"><span class="toc-number">1.9.</span> <span class="toc-text">主题替换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6%E6%9B%B4%E6%96%B0%E4%B8%8E%E5%90%8C%E6%AD%A5"><span class="toc-number">2.</span> <span class="toc-text">博客源文件更新与同步</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%88%96%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0"><span class="toc-number">2.1.</span> <span class="toc-text">修改或添加文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E6%BA%90%E6%96%87%E4%BB%B6%E5%88%B0%E4%BB%93%E5%BA%93"><span class="toc-number">2.2.</span> <span class="toc-text">更新源文件到仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="toc-number">2.3.</span> <span class="toc-text">hexo常用插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E9%A1%B5%E6%98%BE%E7%A4%BA%E5%B7%A5%E7%A8%8B%E5%88%97%E8%A1%A8"><span class="toc-number">2.4.</span> <span class="toc-text">首页显示工程列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9"><span class="toc-number">2.5.</span> <span class="toc-text">标题样式修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E6%96%87%E7%9B%B8%E5%85%B3"><span class="toc-number">3.</span> <span class="toc-text">博文相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%8D%9A%E6%96%87%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87"><span class="toc-number">3.1.</span> <span class="toc-text">在博文中添加图标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E7%AD%BE%E5%90%8D%E5%AD%97%E4%BD%93"><span class="toc-number">3.2.</span> <span class="toc-text">修改博客签名字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE%E9%A1%B5"><span class="toc-number">3.3.</span> <span class="toc-text">添加友链页</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">配置博客到云服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85shell%E5%B9%B6%E8%81%94%E6%9C%BA"><span class="toc-number">4.1.</span> <span class="toc-text">安装shell并联机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85git"><span class="toc-number">4.2.</span> <span class="toc-text">安装git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%BB%E6%9C%BA%E7%94%A8%E6%88%B7%E5%92%8C%E5%AF%86%E7%A0%81%E5%B9%B6%E9%85%8D%E7%BD%AESSH%E5%AF%86%E7%A0%81"><span class="toc-number">4.3.</span> <span class="toc-text">创建主机用户和密码并配置SSH密码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E5%AF%86%E9%92%A5-ssh%E6%9D%83%E9%99%90"><span class="toc-number">4.3.1.</span> <span class="toc-text">配置用户密钥.ssh权限</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE"><span class="toc-number">4.4.</span> <span class="toc-text">git仓库配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEnginx"><span class="toc-number">4.5.</span> <span class="toc-text">配置nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEnginx%E8%BD%AC%E5%8F%91"><span class="toc-number">4.6.</span> <span class="toc-text">配置nginx转发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0blog%E6%96%87%E4%BB%B6%E5%B9%B6%E5%8F%91%E5%B8%83%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">4.7.</span> <span class="toc-text">配置本地blog文件并发布到云服务器</span></a></li></ol></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://pandaefx.github.io/post/202405182337.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://pandaefx.github.io/post/202405182337.html&text=Hexo博客搭建"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://pandaefx.github.io/post/202405182337.html&title=Hexo博客搭建"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://pandaefx.github.io/post/202405182337.html&is_video=false&description=Hexo博客搭建"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hexo博客搭建&body=Check out this article: https://pandaefx.github.io/post/202405182337.html"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://pandaefx.github.io/post/202405182337.html&title=Hexo博客搭建"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://pandaefx.github.io/post/202405182337.html&title=Hexo博客搭建"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://pandaefx.github.io/post/202405182337.html&title=Hexo博客搭建"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://pandaefx.github.io/post/202405182337.html&title=Hexo博客搭建"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://pandaefx.github.io/post/202405182337.html&name=Hexo博客搭建&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://pandaefx.github.io/post/202405182337.html&t=Hexo博客搭建"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+      <div class="footer-left">
+        <nav>
+          Copyright &copy;
+          
+          
+          2024
+          <!--%= config.author || config.title %-->
+          <a target="_blank" rel="noopener" href="https://github.com/probberechts/hexo-theme-cactus">cactus</a> <!--跳转到主题官方页面-->
+        </nav>
+        <nav>
+          <i class="fa-solid fa-triangle-exclamation fa-.5x"></i>
+          Do not share my personal information.
+        </nav>
+      </div>
+      <div class="footer-right">
+        <nav>
+          <ul>
+            <!--
+          --><li><a href="/">Home</a></li><!--
+        --><!--
+          --><li><a href="/subpages/about/">About</a></li><!--
+        --><!--
+          --><li><a href="/subpages/archives/">Writing</a></li><!--
+        --><!--
+          --><li><a href="/subpages/friend/">Friend</a></li><!--
+        --><!--
+          --><li><a href="/subpages/search/">Search</a></li><!--
+        -->
+          </ul>
+          <ul>
+            
+              <!-- 不蒜子统计 -->
+              <span id="busuanzi_container_site_pv">
+                <i class="fa-solid fa-eye fa-.5x"></i> <span id="busuanzi_value_site_pv"></span>
+              </span>
+              <span class="post-meta-divider">|</span>
+              <span id="busuanzi_container_site_uv" style='display:none'>
+                <i class="fa-solid fa-user fa-.5x"></i> <span id="busuanzi_value_site_uv"></span>
+              </span>
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            
+          </ul>
+        </nav>
+      </div>
+      
+</footer>
+
+
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

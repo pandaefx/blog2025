@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="学习心态与方法🔗 觉醒,初学时应尽量按照教程步骤复刻,尽量做到100%复刻;摒弃创新,保存质疑和疑问.(守,保守) 初成,工作时或实践时,寻求突破对疑问进行发掘破解,将知识融汇贯通自成一体.(破,突破) 大成,对知识体系熟悉,能够从任意角度或方式来理解解构对应的知识体系,自成一家.(离,融汇贯通)  前端框架知识体积 HTML5 CSS3 JavaScript ES6新特性 Vue3  HTML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web-beginner">
+<meta property="og:url" content="https://pandaefx.github.io/post/web-beginner.html">
+<meta property="og:site_name" content="雲中龍少">
+<meta property="og:description" content="学习心态与方法🔗 觉醒,初学时应尽量按照教程步骤复刻,尽量做到100%复刻;摒弃创新,保存质疑和疑问.(守,保守) 初成,工作时或实践时,寻求突破对疑问进行发掘破解,将知识融汇贯通自成一体.(破,突破) 大成,对知识体系熟悉,能够从任意角度或方式来理解解构对应的知识体系,自成一家.(离,融汇贯通)  前端框架知识体积 HTML5 CSS3 JavaScript ES6新特性 Vue3  HTML">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-05-14T17:36:38.000Z">
+<meta property="article:modified_time" content="2024-05-17T09:30:24.000Z">
+<meta property="article:author" content="Mr.Cat">
+<meta property="article:tag" content="web">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/img/yun-615.webp">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/img/yun-192.webp" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/img/yun-192.webp">
+        
+      
+    
+    <!-- title -->
+    <title>web-beginner</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="雲中龍少" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/subpages/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/subpages/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/subpages/friend/">Friend</a></li><!--
+     --><!--
+       --><li><a href="/subpages/search/">Search</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/post/202405182337.html"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/post/Site-large-collection.html"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://pandaefx.github.io/post/web-beginner.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://pandaefx.github.io/post/web-beginner.html&text=web-beginner"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://pandaefx.github.io/post/web-beginner.html&title=web-beginner"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://pandaefx.github.io/post/web-beginner.html&is_video=false&description=web-beginner"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=web-beginner&body=Check out this article: https://pandaefx.github.io/post/web-beginner.html"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://pandaefx.github.io/post/web-beginner.html&title=web-beginner"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://pandaefx.github.io/post/web-beginner.html&title=web-beginner"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://pandaefx.github.io/post/web-beginner.html&title=web-beginner"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://pandaefx.github.io/post/web-beginner.html&title=web-beginner"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://pandaefx.github.io/post/web-beginner.html&name=web-beginner&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://pandaefx.github.io/post/web-beginner.html&t=web-beginner"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%BF%83%E6%80%81%E4%B8%8E%E6%96%B9%E6%B3%95%F0%9F%94%97"><span class="toc-number">1.</span> <span class="toc-text">学习心态与方法🔗</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%9F%A5%E8%AF%86%E4%BD%93%E7%A7%AF"><span class="toc-number">2.</span> <span class="toc-text">前端框架知识体积</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-number">3.</span> <span class="toc-text">HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#html%E5%9F%BA%E7%A1%80%E6%A0%BC%E5%BC%8F"><span class="toc-number">3.1.</span> <span class="toc-text">html基础格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#html%E7%9A%84%E6%A0%87%E7%AD%BE%F0%9F%94%97"><span class="toc-number">3.2.</span> <span class="toc-text">html的标签🔗</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.1.</span> <span class="toc-text">文本标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.2.</span> <span class="toc-text">列表标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.3.</span> <span class="toc-text">表格标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.4.</span> <span class="toc-text">表单标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#h5%E6%96%B0%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.5.</span> <span class="toc-text">h5新标签</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#html%E7%9A%84%E6%A0%87%E7%AD%BE%E5%B1%9E%E6%80%A7%F0%9F%94%97"><span class="toc-number">3.3.</span> <span class="toc-text">html的标签属性🔗</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E5%B1%9E%E6%80%A7"><span class="toc-number">3.3.1.</span> <span class="toc-text">表格属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E5%B1%9E%E6%80%A7"><span class="toc-number">3.3.2.</span> <span class="toc-text">表单属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0"><span class="toc-number">3.4.</span> <span class="toc-text">表单元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%97%E5%85%83%E7%B4%A0%E4%B8%8E%E5%86%85%E8%A1%8C%E5%85%83%E7%B4%A0-%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0"><span class="toc-number">3.5.</span> <span class="toc-text">块元素与内行元素(内联元素)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3%F0%9F%94%97"><span class="toc-number">4.</span> <span class="toc-text">CSS3🔗</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E7%9A%84%E5%BC%95%E7%94%A8"><span class="toc-number">4.1.</span> <span class="toc-text">CSS的引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%F0%9F%94%97"><span class="toc-number">5.</span> <span class="toc-text">选择器🔗</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">5.1.</span> <span class="toc-text">全局选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">5.2.</span> <span class="toc-text">元素选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">5.3.</span> <span class="toc-text">类选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ID%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">5.4.</span> <span class="toc-text">ID选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">5.5.</span> <span class="toc-text">合并选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">5.6.</span> <span class="toc-text">选择器的优先级</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="toc-number">6.</span> <span class="toc-text">字体属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2"><span class="toc-number">6.1.</span> <span class="toc-text">字体颜色</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript"><span class="toc-number">7.</span> <span class="toc-text">JavaScript</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        web-beginner
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Mr.Cat</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-05-14T17:36:38.000Z" class="dt-published" itemprop="datePublished">2024-05-15</time>
+        
+        (Updated: <time datetime="2024-05-17T09:30:24.000Z" class="dt-updated" itemprop="dateModified">2024-05-17</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/subpages/categories/note/">note</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/subpages/tags/web/" rel="tag">web</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="学习心态与方法🔗"><a href="#学习心态与方法🔗" class="headerlink" title="学习心态与方法🔗"></a>学习心态与方法<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1jj411P7Yp?p=1">🔗</a></h2><ol>
+<li>觉醒,初学时应尽量按照教程步骤复刻,尽量做到100%复刻;摒弃创新,保存质疑和疑问.(守,保守)</li>
+<li>初成,工作时或实践时,寻求突破对疑问进行发掘破解,将知识融汇贯通自成一体.(破,突破)</li>
+<li>大成,对知识体系熟悉,能够从任意角度或方式来理解解构对应的知识体系,自成一家.(离,融汇贯通)</li>
+</ol>
+<h2 id="前端框架知识体积"><a href="#前端框架知识体积" class="headerlink" title="前端框架知识体积"></a>前端框架知识体积</h2><ol>
+<li>HTML5</li>
+<li>CSS3</li>
+<li>JavaScript</li>
+<li>ES6新特性</li>
+<li>Vue3</li>
+</ol>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h3 id="html基础格式"><a href="#html基础格式" class="headerlink" title="html基础格式"></a>html基础格式</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    	hello html!</span><br><span class="line">		<span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>有序列表<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>有序列表<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>html的&lt;&gt;号基本都是成对出现,构成一个搭档如<code>&lt;html&gt;&lt;/html&gt;</code>.html的符号一定要是英文输入状态下的符号.<br>html文件以.html为后缀才为正常的html文件.<br><!DOCTYPE html> 为html的文本类型声明,使浏览器快速识别.</p>
+</blockquote>
+<h3 id="html的标签🔗"><a href="#html的标签🔗" class="headerlink" title="html的标签🔗"></a>html的标签<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1jj411P7Yp?p=6">🔗</a></h3><ul>
+<li><code>html</code>标签,定义文件内容为html,同时也包含了html的所有内容,html文本的所有内容都要在<code>&lt;html&gt;&lt;/html&gt;</code>中书写.</li>
+<li><code>head</code>标签,定义html的头部内容,html的头部内容一般包括html文档的各个属性的定义和声明,包含文档的标题,引用项目中其他相关文件等.</li>
+<li><code>body</code>标签,body标签内容为html文档的主要内容,包含文本,超链接,图片,视频等等内容.</li>
+<li><code>title</code>标签,定义html文件的标题,即html在浏览器标签或状态栏上所显示的名字.同时title还有利于SEO(搜索引擎搜索)的优化.</li>
+<li><code>meta</code>标签,用来描述html文件的文档属性,关键词等,如编码格式UTF-8.</li>
+</ul>
+<blockquote>
+<p>html中,大多数的标签都是双标签,及标签头和标签尾两部分组成<code>&lt;html&gt;&lt;/html&gt;</code>,这样的标签被称为<em><strong>双标签</strong></em>.<br>而也有只需要一个&lt;&gt;标签就一个完整标签的存在,如img标签,meta标签,这种类型的标签被称为<em><strong>单标签</strong></em>.</p>
+</blockquote>
+<ul>
+<li><code>h1</code>-<code>h6</code>标签,用于定义页面中的关键段落标题,合理的书写有利于SEO的优化.</li>
+<li><code>p</code>段落标签,在html书写文章段落时,可以使用<code>&lt;p&gt;&lt;/p&gt;</code>中,这样p标签中的内容则为一个段落.</li>
+<li><code>br</code>换行标签,html中需要文章另起一行时,在该行末尾使用<code>&lt;/br&gt;</code>(单标签)使接下来的内容在html中另起一行显示.</li>
+<li><code>hr</code>水平线标签,在html中使用<code>&lt;/hr&gt;</code>(单标签),则会在html中显示为一条横线.</li>
+<li><code>img</code>图片标签,在html中引用图片资源<code>&lt;img src=&quot;资源连接&quot;&gt;</code>(单标签).</li>
+<li><code>input</code>输入标签,用来获取用户输入的数据信息.(单标签)</li>
+<li><code>a</code>超文本链接标签,在html中a标签可以定义用户点击后实现跳转的功能.<code>&lt;a herf=&quot;&quot;&gt;&lt;/a&gt;</code></li>
+<li><code>div</code>容器标签,在html中用div对页面内容进行容器划分,方便html文本内容的阅读管理和css和js对相应内容进行修饰.</li>
+</ul>
+<h4 id="文本标签"><a href="#文本标签" class="headerlink" title="文本标签"></a>文本标签</h4><ul>
+<li><code>em</code>重点文本标签.</li>
+<li><code>b</code>粗体文本标签.</li>
+<li><code>i</code>斜体文本标签.</li>
+<li><code>strong</code>加重文本标签.</li>
+<li><code>del</code>删除文本标签.</li>
+<li><code>span</code>空标签,没有特定含义.</li>
+</ul>
+<h4 id="列表标签"><a href="#列表标签" class="headerlink" title="列表标签"></a>列表标签</h4><ul>
+<li><code>ol</code>有序列表标签.</li>
+<li><code>ul</code>无序列表标签.</li>
+</ul>
+<h4 id="表格标签"><a href="#表格标签" class="headerlink" title="表格标签"></a>表格标签</h4><ul>
+<li><code>table</code>表格标签.</li>
+<li><code>tr</code>行标签.</li>
+<li><code>td</code>单元格&#x2F;列标签.</li>
+</ul>
+<h4 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h4><ul>
+<li><code>form</code>表单,<blockquote>
+<p>表单由容器和控件组成,一个表单包含信息输入和信息提交(控件)等多个控件组成.</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="h5新标签"><a href="#h5新标签" class="headerlink" title="h5新标签"></a>h5新标签</h4><ul>
+<li><code>header</code>头部标签</li>
+<li><code>nav</code>导航标签</li>
+<li><code>section</code>页眉页脚标签</li>
+<li><code>aside</code>侧边栏标签</li>
+<li><code>footer</code>底部标签</li>
+<li><code>article</code>文章标签(包括文章内容,评论等)</li>
+</ul>
+<h3 id="html的标签属性🔗"><a href="#html的标签属性🔗" class="headerlink" title="html的标签属性🔗"></a>html的标签属性<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1jj411P7Yp?p=12">🔗</a></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;git.md&quot;</span>&gt;</span>git<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>align</code>属性,对齐属性,用来定义标签在html页面中的位置,默认值为left(左对齐)·center(居中)·right(右对齐).</li>
+<li><code>color</code>属性,颜色属性,用来定义标签中内容的颜色.</li>
+<li><code>width</code>属性,宽度属性,用来定义标签内容的宽度,常用于<code>&lt;img&gt;&lt;/img&gt;</code>标签中.</li>
+<li><code>size</code>属性,大小属性,用来定义标签内容的大小,常用于设置字体的大小.</li>
+<li><code>src</code>属性,源属性,用来定义标签内容的来源.</li>
+<li><code>alt</code>属性,替代文本,在给图片设置alt属性时,在图片未加载时html会显示alt的内容.</li>
+<li><code>height</code>属性,高度属性,定义标签内容的高度.</li>
+<li><code>title</code>属性,title属性,在给图片定义title属性时,鼠标悬停在图片上会显示title的内容.</li>
+<li><code>href</code>属性,链接地址属性,在a标签中用来定义a标签要实现跳转的目标地址.</li>
+<li><code>type</code>属性,类型属性,定义标签的类型,如在<code>&lt;ol type=&quot;a&quot;&gt;&lt;/ol&gt;</code>中type有(1,a,A,i,I)这几个值;<code>&lt;ul type=&quot;disc&quot;&gt;&lt;/ul&gt;</code>中type有(disc,circle,square,none)这几个值.</li>
+</ul>
+<h4 id="表格属性"><a href="#表格属性" class="headerlink" title="表格属性"></a>表格属性</h4><ul>
+<li><code>border</code>属性,边框属性,定义表格的边框.</li>
+<li><code>colspan</code>属性,水平合并单元格<code>&lt;tr colspan=&quot;2&quot;&gt;&lt;/tr&gt;</code>.</li>
+<li><code>rowspan</code>属性,垂直合并单元格.</li>
+</ul>
+<h4 id="表单属性"><a href="#表单属性" class="headerlink" title="表单属性"></a>表单属性</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;url&quot;</span> <span class="attr">method</span>=<span class="string">&quot;get|post&quot;</span> <span class="attr">name</span>=<span class="string">&quot;name&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>action服务器地址,name表单名,method中get提交的url数据可见post不可见,get一般用于少量数据提交,post用于大量数据.    </p>
+</blockquote>
+<h3 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h3><ul>
+<li>表单标签</li>
+<li>表单域</li>
+<li>表单按钮<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+文本域通过<code>&lt;input type=&quot;text&quot;&gt;</code>标签定义,当用户需要输入文本,字母,数字等内容时会使用文本域.<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">	user name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;user name&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">	password: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;sign in&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="块元素与内行元素-内联元素"><a href="#块元素与内行元素-内联元素" class="headerlink" title="块元素与内行元素(内联元素)"></a>块元素与内行元素(内联元素)</h3><html>
+<table border="1px">
+    <td width="5000" align="center" >
+        <li type="none"><strong>块元素</strong></li>
+        <li type="none"><em>块元素元素会在页面中独占一行,(自上向下垂直排列)</em></li>
+        <li type="none">可以设置width,height属性</li>
+        <li type="none"><em>一般块级元素可以包含行内元素和其他块级元素</em></li>
+    </td>
+    <td width="5000" align="center">
+        <li type="none"><strong>内行元素</strong></li>
+        <li type="none"><em>行内元素不会独占一行,只会占用元素自身实际大小范围</em></li>
+        <li type="none">行内元素设置width,height无效</li>
+        <li type="none"><em>一般内联元素包含内联元素不包含块级元素</em></li>
+    </td>
+</table>
+</html>
+
+<blockquote>
+<p>常见块级元素 div, form, h1~h6, hr, p, table, ul等.<br>常见的内联元素 a, b, em, i, span, strong等.<br>行内块级元素(特点:不换行能够设定width宽height高) button, img, input等.</p>
+</blockquote>
+<hr>
+<h2 id="CSS3🔗"><a href="#CSS3🔗" class="headerlink" title="CSS3🔗"></a>CSS3<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1jj411P7Yp?p=20">🔗</a></h2><p>CSS(Cascading Style Sheets)层级样式表,又叫级联样式表,简称样式表;文件的后缀为<code>.css</code>.<br>使用CSS来定义或控制html中元素在页面的样式,使元素看起来更加美观.<br>Css的基本语法由选择器加一条或多条声明构成.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        h1&#123;</span></span><br><span class="line"><span class="language-xml">            color: blue;        <span class="comment">&lt;!--h1为选择器大括号内的为声明.--&gt;</span></span></span><br><span class="line"><span class="language-xml">            font-size: 10px; 	<span class="comment">&lt;!--font-size为属性名10px为属性值.--&gt;</span></span></span><br><span class="line"><span class="language-xml">        &#125;</span></span><br><span class="line"><span class="language-xml">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><br><span class="line">	  super css.</span><br><span class="line">    <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>选择器通常为要改变样式的html元素,每条声明由属性和属性值构成,属性和属性值用<code>:</code>,每条声明结尾用<code>;</code>.</br><br>上面这种直接在html中使用<code>&lt;style&gt;&lt;/sttyle&gt;</code>标签来写css的方式叫作css内嵌式引用.</br></p>
+<h3 id="CSS的引用"><a href="#CSS的引用" class="headerlink" title="CSS的引用"></a>CSS的引用</h3><ol>
+<li><code>&lt;p style=&quot;background-color: #2bbc8a; font-size: 10px;&quot;&gt;css&lt;/p&gt;</code>,以属性的方式直接在html标签中定义的样式内联样式(行内样式).</li>
+<li>直接在html中使用<code>&lt;style&gt;&lt;/sttyle&gt;</code>标签来写css的方式叫作内部样式(如↑的代码).</li>
+<li>通过链接从<code>.css</code>文件引用样式到html中的方式称为外部样式(推荐用法).<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./main.css&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    input by .css file.</span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+在html的header内使用link标签(单标签)引用外部<code>.css</code>样式文件.</br><br>以这种方式引用css样式的方式,在多个文件都在使用这个css样式时,只需要修改单个css文件即可.</li>
+</ol>
+<h2 id="选择器🔗"><a href="#选择器🔗" class="headerlink" title="选择器🔗"></a>选择器<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1jj411P7Yp?p=22">🔗</a></h2><h3 id="全局选择器"><a href="#全局选择器" class="headerlink" title="全局选择器"></a>全局选择器</h3><p>可以和任何元素匹配,优先级最低,一般用作初始化操作.</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="元素选择器"><a href="#元素选择器" class="headerlink" title="元素选择器"></a>元素选择器</h3><p>根据html中标签名作为选择器的选择器称为元素选择器,常见的有 p, b, div, a, img, body等.</br><br>标签选择器的定义会对页面所有改标签的内用产生作用,所以经常描述”共性”,无法描述某一元素的个性.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-tag">div</span>&#123;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css">  <span class="selector-tag">img</span>&#123;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.text</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">color</span>: <span class="number">#2bbc8a</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;text&quot;</span>&gt;</span>类选择器<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在html中给指定标签添加class属性,设置属性值为选择器名;然后在css文件中通过<code>.属性值</code>来定义这个标签内容的样式.</br><br>类选择器灵活方便,便于修改,类选择器以<code>.</code>加class<code>属性名</code>组成,如<code>.oneclass</code>.</p>
+<blockquote>
+<p>类选择器的特点与注意项</br></p>
+<ol>
+<li>类选择器可以被多种标签使用.</li>
+<li>类名不能以数字开头.</li>
+<li>同一个标签可以使用多个类选择器,用空格隔开.</li>
+</ol>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.text</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">color</span>: <span class="number">#2bbc8a</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;text color&quot;</span>&gt;</span>类选择器<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>&lt;h2 class=&quot;oneclass&quot; class=&quot;twoclass&quot;&gt;class&lt;/h2&gt;</code> 错误❌.</br></p>
+<h3 id="ID选择器"><a href="#ID选择器" class="headerlink" title="ID选择器"></a>ID选择器</h3><p>html中给指定的某一个标签添加id属性,就可以通过<code>#</code>加<code>id属性值</code>来定义id所对应的标签样式.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-id">#text</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">color</span>: <span class="number">#2bbc8a</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;text&quot;</span>&gt;</span>id选择器<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>ID选择器的特点</p>
+<ol>
+<li>一个id只能使用一次(唯一性).</li>
+<li>id(属性值)不能以数字开头.</li>
+</ol>
+</blockquote>
+<h3 id="合并选择器"><a href="#合并选择器" class="headerlink" title="合并选择器"></a>合并选择器</h3><p>当两个选择器定义的属性参数有大量相同时,使用合并选择器的方式来定义相同参数,再用各自定义不同的参数,这样可以<em>减少代码重复率</em>节省代码量.</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.main-left</span>,<span class="selector-class">.main-right</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">20px</span> <span class="number">20px</span> <span class="number">10px</span> <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">70px</span>;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">45%</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">49</span>, <span class="number">52</span>, <span class="number">54</span>, <span class="number">0.8</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main-left</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main-right</span>&#123;</span><br><span class="line">    <span class="attribute">float</span>: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="选择器的优先级"><a href="#选择器的优先级" class="headerlink" title="选择器的优先级"></a>选择器的优先级</h3><table>
+<thead>
+<tr>
+<th align="center">选择类型</th>
+<th align="center">选择器名</th>
+<th align="center">索引方式</th>
+<th align="center">优先级</th>
+<th align="center">补充说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">全局选择器</td>
+<td align="center">*</td>
+<td align="center">*{}</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">元素选择器</td>
+<td align="center">标签名(a,div…)</td>
+<td align="center">标签名(a{},div{}…)</td>
+<td align="center">1</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">类选择器</td>
+<td align="center">类属性值(class)</td>
+<td align="center">.类属性值(.class{})</td>
+<td align="center">10</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">id选择器</td>
+<td align="center">id属性值(text)</td>
+<td align="center">#id属性值(#text{})</td>
+<td align="center">100</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>行内样式(内联样式)选择器<code>&lt;p style=&quot;color: #2bbc8a&quot;&gt;&lt;/p&gt;</code>,即在标签中使用style定义的选择器权重为<code>1000</code></p>
+</blockquote>
+<p style="font-size: large">行内样式 > ID选择器 > 类选择器 > 元素选择器</p>
+
+<h2 id="字体属性"><a href="#字体属性" class="headerlink" title="字体属性"></a>字体属性</h2><h3 id="字体颜色"><a href="#字体颜色" class="headerlink" title="字体颜色"></a>字体颜色</h3><hr>
+<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><p><a href="./web-web-intermediate.md">web-intermediate</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/subpages/about/">About</a></li>
+        
+          <li><a href="/subpages/archives/">Writing</a></li>
+        
+          <li><a href="/subpages/friend/">Friend</a></li>
+        
+          <li><a href="/subpages/search/">Search</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%BF%83%E6%80%81%E4%B8%8E%E6%96%B9%E6%B3%95%F0%9F%94%97"><span class="toc-number">1.</span> <span class="toc-text">学习心态与方法🔗</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%9F%A5%E8%AF%86%E4%BD%93%E7%A7%AF"><span class="toc-number">2.</span> <span class="toc-text">前端框架知识体积</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-number">3.</span> <span class="toc-text">HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#html%E5%9F%BA%E7%A1%80%E6%A0%BC%E5%BC%8F"><span class="toc-number">3.1.</span> <span class="toc-text">html基础格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#html%E7%9A%84%E6%A0%87%E7%AD%BE%F0%9F%94%97"><span class="toc-number">3.2.</span> <span class="toc-text">html的标签🔗</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.1.</span> <span class="toc-text">文本标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.2.</span> <span class="toc-text">列表标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.3.</span> <span class="toc-text">表格标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.4.</span> <span class="toc-text">表单标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#h5%E6%96%B0%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.5.</span> <span class="toc-text">h5新标签</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#html%E7%9A%84%E6%A0%87%E7%AD%BE%E5%B1%9E%E6%80%A7%F0%9F%94%97"><span class="toc-number">3.3.</span> <span class="toc-text">html的标签属性🔗</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E5%B1%9E%E6%80%A7"><span class="toc-number">3.3.1.</span> <span class="toc-text">表格属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E5%B1%9E%E6%80%A7"><span class="toc-number">3.3.2.</span> <span class="toc-text">表单属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0"><span class="toc-number">3.4.</span> <span class="toc-text">表单元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%97%E5%85%83%E7%B4%A0%E4%B8%8E%E5%86%85%E8%A1%8C%E5%85%83%E7%B4%A0-%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0"><span class="toc-number">3.5.</span> <span class="toc-text">块元素与内行元素(内联元素)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3%F0%9F%94%97"><span class="toc-number">4.</span> <span class="toc-text">CSS3🔗</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E7%9A%84%E5%BC%95%E7%94%A8"><span class="toc-number">4.1.</span> <span class="toc-text">CSS的引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%F0%9F%94%97"><span class="toc-number">5.</span> <span class="toc-text">选择器🔗</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">5.1.</span> <span class="toc-text">全局选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">5.2.</span> <span class="toc-text">元素选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">5.3.</span> <span class="toc-text">类选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ID%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">5.4.</span> <span class="toc-text">ID选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">5.5.</span> <span class="toc-text">合并选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">5.6.</span> <span class="toc-text">选择器的优先级</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="toc-number">6.</span> <span class="toc-text">字体属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2"><span class="toc-number">6.1.</span> <span class="toc-text">字体颜色</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript"><span class="toc-number">7.</span> <span class="toc-text">JavaScript</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://pandaefx.github.io/post/web-beginner.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://pandaefx.github.io/post/web-beginner.html&text=web-beginner"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://pandaefx.github.io/post/web-beginner.html&title=web-beginner"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://pandaefx.github.io/post/web-beginner.html&is_video=false&description=web-beginner"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=web-beginner&body=Check out this article: https://pandaefx.github.io/post/web-beginner.html"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://pandaefx.github.io/post/web-beginner.html&title=web-beginner"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://pandaefx.github.io/post/web-beginner.html&title=web-beginner"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://pandaefx.github.io/post/web-beginner.html&title=web-beginner"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://pandaefx.github.io/post/web-beginner.html&title=web-beginner"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://pandaefx.github.io/post/web-beginner.html&name=web-beginner&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://pandaefx.github.io/post/web-beginner.html&t=web-beginner"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+      <div class="footer-left">
+        <nav>
+          Copyright &copy;
+          
+          
+          2024
+          <!--%= config.author || config.title %-->
+          <a target="_blank" rel="noopener" href="https://github.com/probberechts/hexo-theme-cactus">cactus</a> <!--跳转到主题官方页面-->
+        </nav>
+        <nav>
+          <i class="fa-solid fa-triangle-exclamation fa-.5x"></i>
+          Do not share my personal information.
+        </nav>
+      </div>
+      <div class="footer-right">
+        <nav>
+          <ul>
+            <!--
+          --><li><a href="/">Home</a></li><!--
+        --><!--
+          --><li><a href="/subpages/about/">About</a></li><!--
+        --><!--
+          --><li><a href="/subpages/archives/">Writing</a></li><!--
+        --><!--
+          --><li><a href="/subpages/friend/">Friend</a></li><!--
+        --><!--
+          --><li><a href="/subpages/search/">Search</a></li><!--
+        -->
+          </ul>
+          <ul>
+            
+              <!-- 不蒜子统计 -->
+              <span id="busuanzi_container_site_pv">
+                <i class="fa-solid fa-eye fa-.5x"></i> <span id="busuanzi_value_site_pv"></span>
+              </span>
+              <span class="post-meta-divider">|</span>
+              <span id="busuanzi_container_site_uv" style='display:none'>
+                <i class="fa-solid fa-user fa-.5x"></i> <span id="busuanzi_value_site_uv"></span>
+              </span>
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            
+          </ul>
+        </nav>
+      </div>
+      
+</footer>
+
+
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

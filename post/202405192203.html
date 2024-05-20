@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="github create repository新建仓库img-cdn.可见性为公开. add file and push克隆仓库到本地. git clone https:&#x2F;&#x2F;github.com&#x2F;pandaefx&#x2F;img-cdn.git 将文件存放在本地库后提交到github.添加所有文件到暂存区. git add . 查看状态. git status 把文件合并到本地仓库. git commi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jsDelivr+Github实现cdn加速(jsDelivr挂了)">
+<meta property="og:url" content="https://pandaefx.github.io/post/202405192203.html">
+<meta property="og:site_name" content="雲中龍少">
+<meta property="og:description" content="github create repository新建仓库img-cdn.可见性为公开. add file and push克隆仓库到本地. git clone https:&#x2F;&#x2F;github.com&#x2F;pandaefx&#x2F;img-cdn.git 将文件存放在本地库后提交到github.添加所有文件到暂存区. git add . 查看状态. git status 把文件合并到本地仓库. git commi">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="1970-01-01T05:37:20.519Z">
+<meta property="article:modified_time" content="2024-05-20T14:31:15.173Z">
+<meta property="article:author" content="Mr.Cat">
+<meta property="article:tag" content="jsDelivr">
+<meta property="article:tag" content="cdn">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/img/yun-615.webp">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/img/yun-192.webp" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/img/yun-192.webp">
+        
+      
+    
+    <!-- title -->
+    <title>jsDelivr+Github实现cdn加速(jsDelivr挂了)</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="雲中龍少" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/subpages/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/subpages/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/subpages/friend/">Friend</a></li><!--
+     --><!--
+       --><li><a href="/subpages/search/">Search</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/post/Site-large-collection.html"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://pandaefx.github.io/post/202405192203.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://pandaefx.github.io/post/202405192203.html&text=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://pandaefx.github.io/post/202405192203.html&title=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://pandaefx.github.io/post/202405192203.html&is_video=false&description=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=jsDelivr+Github实现cdn加速(jsDelivr挂了)&body=Check out this article: https://pandaefx.github.io/post/202405192203.html"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://pandaefx.github.io/post/202405192203.html&title=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://pandaefx.github.io/post/202405192203.html&title=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://pandaefx.github.io/post/202405192203.html&title=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://pandaefx.github.io/post/202405192203.html&title=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://pandaefx.github.io/post/202405192203.html&name=jsDelivr+Github实现cdn加速(jsDelivr挂了)&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://pandaefx.github.io/post/202405192203.html&t=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#github-create-repository"><span class="toc-number">1.</span> <span class="toc-text">github create repository</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#add-file-and-push"><span class="toc-number">2.</span> <span class="toc-text">add file and push</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%91%E5%B8%83releases"><span class="toc-number">3.</span> <span class="toc-text">发布releases</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-%E5%BC%95%E7%94%A8cdn%E8%B5%84%E6%BA%90"><span class="toc-number">4.</span> <span class="toc-text">使用&#x2F;引用cdn资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E5%BC%95%E7%94%A8cdn"><span class="toc-number">5.</span> <span class="toc-text">hexo引用cdn</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        jsDelivr+Github实现cdn加速(jsDelivr挂了)
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Mr.Cat</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="1970-01-01T05:37:20.519Z" class="dt-published" itemprop="datePublished">1970-01-01</time>
+        
+        (Updated: <time datetime="2024-05-20T14:31:15.173Z" class="dt-updated" itemprop="dateModified">2024-05-20</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/subpages/categories/blog/">blog</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/subpages/tags/cdn/" rel="tag">cdn</a>, <a class="p-category" href="/subpages/tags/jsDelivr/" rel="tag">jsDelivr</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="github-create-repository"><a href="#github-create-repository" class="headerlink" title="github create repository"></a>github create repository</h2><p>新建仓库img-cdn.<br>可见性为公开.</p>
+<h2 id="add-file-and-push"><a href="#add-file-and-push" class="headerlink" title="add file and push"></a>add file and push</h2><p>克隆仓库到本地.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/pandaefx/img-cdn.git</span><br></pre></td></tr></table></figure>
+<p>将文件存放在本地库后提交到github.添加所有文件到暂存区.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+<p>查看状态.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+<p>把文件合并到本地仓库.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -m &#x27;备注&#x27;</span><br></pre></td></tr></table></figure>
+<p>将仓库推送到github.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
+<h2 id="发布releases"><a href="#发布releases" class="headerlink" title="发布releases"></a>发布releases</h2><p>回到github仓库页面,右侧Releases,点击Create a new release.<br>设置标签名&#x2F;版本号,说明信息选填.<br>确认release.</p>
+<h2 id="使用-引用cdn资源"><a href="#使用-引用cdn资源" class="headerlink" title="使用&#x2F;引用cdn资源"></a>使用&#x2F;引用cdn资源</h2><p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/%E4%BD%A0%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D/%E4%BD%A0%E7%9A%84%E4%BB%93%E5%BA%93%E5%90%8D@%E5%8F%91%E5%B8%83%E7%9A%84%E7%89%88%E6%9C%AC%E5%8F%B7/%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/pandaefx/img-cdn@1.0/source/images/logo-cat.gif</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+</blockquote>
+<p>加载任何Github发布、提交或分支<br><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/user/repo@version/file">https://cdn.jsdelivr.net/gh/user/repo@version/file</a><br>加载 jQuery v3.2.1<br><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js">https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js</a><br>使用版本范围而不是特定版本<br><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js">https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js</a>   <a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js">https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js</a><br>完全省略该版本以获取最新版本<br><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/jquery/jquery/dist/jquery.min.js">https://cdn.jsdelivr.net/gh/jquery/jquery/dist/jquery.min.js</a><br>将“.min”添加到任何JS&#x2F;CSS文件中以获取缩小版本，如果不存在，将为会自动生成<br><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/src/core.min.js">https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/src/core.min.js</a><br>在末尾添加 &#x2F; 以获取资源目录列表<br><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/jquery/jquery/">https://cdn.jsdelivr.net/gh/jquery/jquery/</a>    </p>
+<h2 id="hexo引用cdn"><a href="#hexo引用cdn" class="headerlink" title="hexo引用cdn"></a>hexo引用cdn</h2><p>使用到的前端库，可按需替换成对应的CDN地址，如果下面未指定具体的版本号，使用最新的版本即可.<br>注：jsdelivr可以自动帮你生成.min版的js和css，所以你在设置js及css路径中可以直接写.min.xxx</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">libs:</span></span><br><span class="line">  <span class="attr">css:</span></span><br><span class="line">    <span class="attr">matery:</span> <span class="string">https://cdn.jsdelivr.net/gh/xiezhr/mycdn/source/css/matery.css</span></span><br><span class="line">    <span class="attr">mycss:</span> <span class="string">https://cdn.jsdelivr.net/gh/xiezhr/mycdn/source/css/my.css</span></span><br><span class="line">    <span class="attr">fontAwesome:</span> <span class="string">https://cdn.jsdelivr.net/gh/xiezhr/mycdn/source/libs/awesome/css/all.css</span> <span class="comment"># V5.11.1</span></span><br><span class="line">    <span class="attr">materialize:</span> <span class="string">https://cdn.jsdelivr.net/gh/xiezhr/mycdn/source/libs/materialize/materialize.min.css</span> <span class="comment"># 1.0.0</span></span><br><span class="line">    <span class="attr">aos:</span> <span class="string">https://cdn.jsdelivr.net/gh/xiezhr/mycdn/source/libs/aos/aos.css</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/346643522">如何使用jsDelivr+Github 实现免费CDN加速? - 知乎 (zhihu.com)</a><br><a target="_blank" rel="noopener" href="https://www.jsdelivr.com/">jsDelivr - A free, fast, and reliable CDN for JS and open source</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/subpages/about/">About</a></li>
+        
+          <li><a href="/subpages/archives/">Writing</a></li>
+        
+          <li><a href="/subpages/friend/">Friend</a></li>
+        
+          <li><a href="/subpages/search/">Search</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#github-create-repository"><span class="toc-number">1.</span> <span class="toc-text">github create repository</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#add-file-and-push"><span class="toc-number">2.</span> <span class="toc-text">add file and push</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%91%E5%B8%83releases"><span class="toc-number">3.</span> <span class="toc-text">发布releases</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-%E5%BC%95%E7%94%A8cdn%E8%B5%84%E6%BA%90"><span class="toc-number">4.</span> <span class="toc-text">使用&#x2F;引用cdn资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E5%BC%95%E7%94%A8cdn"><span class="toc-number">5.</span> <span class="toc-text">hexo引用cdn</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://pandaefx.github.io/post/202405192203.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://pandaefx.github.io/post/202405192203.html&text=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://pandaefx.github.io/post/202405192203.html&title=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://pandaefx.github.io/post/202405192203.html&is_video=false&description=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=jsDelivr+Github实现cdn加速(jsDelivr挂了)&body=Check out this article: https://pandaefx.github.io/post/202405192203.html"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://pandaefx.github.io/post/202405192203.html&title=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://pandaefx.github.io/post/202405192203.html&title=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://pandaefx.github.io/post/202405192203.html&title=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://pandaefx.github.io/post/202405192203.html&title=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://pandaefx.github.io/post/202405192203.html&name=jsDelivr+Github实现cdn加速(jsDelivr挂了)&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://pandaefx.github.io/post/202405192203.html&t=jsDelivr+Github实现cdn加速(jsDelivr挂了)"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+      <div class="footer-left">
+        <nav>
+          Copyright &copy;
+          
+          
+          2024
+          <!--%= config.author || config.title %-->
+          <a target="_blank" rel="noopener" href="https://github.com/probberechts/hexo-theme-cactus">cactus</a> <!--跳转到主题官方页面-->
+        </nav>
+        <nav>
+          <i class="fa-solid fa-triangle-exclamation fa-.5x"></i>
+          Do not share my personal information.
+        </nav>
+      </div>
+      <div class="footer-right">
+        <nav>
+          <ul>
+            <!--
+          --><li><a href="/">Home</a></li><!--
+        --><!--
+          --><li><a href="/subpages/about/">About</a></li><!--
+        --><!--
+          --><li><a href="/subpages/archives/">Writing</a></li><!--
+        --><!--
+          --><li><a href="/subpages/friend/">Friend</a></li><!--
+        --><!--
+          --><li><a href="/subpages/search/">Search</a></li><!--
+        -->
+          </ul>
+          <ul>
+            
+              <!-- 不蒜子统计 -->
+              <span id="busuanzi_container_site_pv">
+                <i class="fa-solid fa-eye fa-.5x"></i> <span id="busuanzi_value_site_pv"></span>
+              </span>
+              <span class="post-meta-divider">|</span>
+              <span id="busuanzi_container_site_uv" style='display:none'>
+                <i class="fa-solid fa-user fa-.5x"></i> <span id="busuanzi_value_site_uv"></span>
+              </span>
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            
+          </ul>
+        </nav>
+      </div>
+      
+</footer>
+
+
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
